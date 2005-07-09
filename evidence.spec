@@ -2,16 +2,16 @@
 # Conditional build:
 %bcond_without	kio	# disable kio backend
 #
-%define _snap 20050701
 Name:		evidence
 Summary:	Evidence is an eye-candy GTK2/evas file manager.
 Version:	0.9.8
+%define	_snap	20050701
 Release:	0.%{_snap}.0.1
 License:	GPL v2
 Group:		X11/Applications
 URL:		http://evidence.sourceforge.net/
 Source0:	ftp://sparky.homelinux.org/snaps/evidence/%{name}-%{_snap}.tar.gz
-# Source0-md5:	8de043ad88efa1cf772c8e26aebd9a5b
+# Source0-md5:	57077b7549fd8aeacad8670ed5dc30e7
 #http://dl.sourceforge.net/evidence/%{name}-%{version}-%{_snap}.tar.gz
 Source1:	%{name}.desktop
 BuildRequires:	XFree86-devel
