@@ -2,18 +2,19 @@
 # Conditional build:
 %bcond_without	kio	# disable kio backend
 #
+Summary:	Evidence - an eye-candy GTK+2/evas file manager
+Summary(pl):	Evidence - przyci±gaj±cy oczy zarz±dca plików oparty na GTK+2/evas
 Name:		evidence
-Summary:	Evidence is an eye-candy GTK2/evas file manager.
 Version:	0.9.8
 %define	_snap	20050701
 Release:	0.%{_snap}.0.1
 License:	GPL v2
 Group:		X11/Applications
-URL:		http://evidence.sourceforge.net/
 Source0:	ftp://sparky.homelinux.org/snaps/evidence/%{name}-%{_snap}.tar.gz
 # Source0-md5:	57077b7549fd8aeacad8670ed5dc30e7
 #http://dl.sourceforge.net/evidence/%{name}-%{version}-%{_snap}.tar.gz
 Source1:	%{name}.desktop
+URL:		http://evidence.sourceforge.net/
 BuildRequires:	XFree86-devel
 BuildRequires:	acl-devel
 BuildRequires:	avifile-devel
@@ -22,7 +23,7 @@ BuildRequires:	edje-devel
 BuildRequires:	evas-devel
 BuildRequires:	fam-devel
 #BuildRequires:	gnome-vfs2-devel #want's build
-BuildRequires:	gtk+2-devel
+BuildRequires:	gtk+2-devel >= 2.0.0
 BuildRequires:	id3lib-devel
 %if %{with kio}
 BuildRequires:	kdelibs-devel
@@ -30,6 +31,7 @@ BuildRequires:	kdelibs-devel
 BuildRequires:	libextractor-devel
 BuildRequires:	libmagic-devel
 BuildRequires:	libmpeg3-devel
+BuildRequires:	libtool
 BuildRequires:	libvorbis-devel
 BuildRequires:	netpbm-progs
 BuildRequires:	pcre-devel
@@ -40,83 +42,126 @@ BuildRequires:	xine-lib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Evidence is a file-manager with plugins for everything -- from
-ultra-fast JPEG previews to MP3/ID3 and Ogg tag editing. No bloat --
+Evidence is a file-manager with plugins for everything - from
+ultra-fast JPEG previews to MP3/ID3 and Ogg tag editing. No bloat -
 what you don't need, you don't load. Micro-shell, MP3 thumbnailing and
 extensive theming opportunities complete this slightly different
 browser.
 
+%description -l pl
+Evidence to zarz±dca plików z wtyczkami do wszystkiego - od bardzo
+szybkiego podgl±du JPEG-ów do modyfikowania znaczników MP3/ID3 i Ogg.
+Bez ¿adnego narzutu - tego, czego nie potrzeba, nie wczytuje siê.
+Mikro-pow³oka, miniaturki MP3 i rozleg³e mo¿liwo¶ci zmiany motywu
+dope³niaj± tê nieco odmienn± przegl±darkê.
+
 %package backend-kio
 Summary:	kio backend
+Summary(pl):	Backend kio
 Group:		X11/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description backend-kio
-kio backend
+kio backend.
+
+%description backend-kio -l pl
+Backend kio.
 
 %package metadata-extractor
 Summary:	Library for extracting information from any file
+Summary(pl):	Biblioteka do wyci±gania informacji z dowolnego pliku
 Group:		X11/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description metadata-extractor
 Library for extracting information from any file.
 
+%description metadata-extractor -l pl
+Biblioteka do wyci±gania informacji z dowolnego pliku.
+
 %package metadata-mp3
-Summary:	Library for extracting information from mp3 files using libid3
+Summary:	Library for extracting information from MP3 files using libid3
+Summary(pl):	Biblioteka do wyci±gania informacji z plików MP3 przy u¿yciu libid3
 Group:		X11/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description metadata-mp3
-Library for extracting information from mp3 files using libid3.
+Library for extracting information from MP3 files using libid3.
+
+%description metadata-mp3 -l pl
+Biblioteka do wyci±gania informacji z plików MP3 przy u¿yciu libid3.
 
 %package metadata-taglib
-Summary:	Library for extracting information from mp3 files using libtag
+Summary:	Library for extracting information from MP3 files using libtag
+Summary(pl):	Biblioteka do wyci±gania informacji z plików MP3 przy u¿yciu libtag
 Group:		X11/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description metadata-taglib
-Library for extracting information from mp3 files using libtag.
+Library for extracting information from MP3 files using libtag.
+
+%description metadata-taglib -l pl
+Biblioteka do wyci±gania informacji z plików MP3 przy u¿yciu libtag.
 
 %package metadata-vorbis
-Summary:	Library for extracting information from ogg/vorbis files
+Summary:	Library for extracting information from Ogg/Vorbis files
+Summary(pl):	Biblioteka do wyci±gania informacji z plików Ogg/Vorbis
 Group:		X11/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description metadata-vorbis
-Library for extracting information from ogg/vorbis files.
+Library for extracting information from Ogg/Vorbis files.
+
+%description metadata-vorbis -l pl
+Biblioteka do wyci±gania informacji z plików Ogg/Vorbis.
 
 %package thumbnailer-avifile
 Summary:	Thumbnailer for video files using avifile
+Summary(pl):	Generator miniaturek dla plików z filmami przy u¿yciu avifile
 Group:		X11/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description thumbnailer-avifile
 Thumbnailer for video files using avifile.
 
+%description thumbnailer-avifile -l pl
+Generator miniaturek dla plików z filmami przy u¿yciu avifile.
+
 %package thumbnailer-id3
-Summary:	Thumbnailer for files having id3 tag
+Summary:	Thumbnailer for files having ID3 tag
+Summary(pl):	Generator miniaturek dla plików ze znacznikami ID3
 Group:		X11/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description thumbnailer-id3
-Thumbnailer for files having id3 tag.
+Thumbnailer for files having ID3 tag.
+
+%description thumbnailer-id3 -l pl
+Generator miniaturek dla plików ze znacznikami ID3.
 
 %package thumbnailer-mpeg3
-Summary:	Thumbnailer for mp3 files
+Summary:	Thumbnailer for MP3 files
+Summary(pl):	Generator miniaturek dla plików MP3
 Group:		X11/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description thumbnailer-mpeg3
-Thumbnailer for mp3 files.
+Thumbnailer for MP3 files.
+
+%description thumbnailer-mpeg3 -l pl
+Generator miniaturek dla plików MP3.
 
 %package thumbnailer-xine
 Summary:	Thumbnailer for video files using xine
+Summary(pl):	Generator miniaturek dla plików z filmami przy u¿yciu xine
 Group:		X11/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description thumbnailer-xine
 Thumbnailer for video files using xine.
+
+%description thumbnailer-xine -l pl
+Generator miniaturek dla plików z filmami przy u¿yciu xine.
 
 %prep
 %setup -q -n %{name}
