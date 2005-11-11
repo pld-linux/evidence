@@ -17,6 +17,8 @@ Source1:	%{name}.desktop
 URL:		http://evidence.sourceforge.net/
 BuildRequires:	XFree86-devel
 BuildRequires:	acl-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	avifile-devel
 BuildRequires:	curl-devel
 BuildRequires:	edje-devel
