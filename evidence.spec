@@ -194,7 +194,7 @@ Generator miniaturek dla plików z filmami przy u¿yciu xine.
 	--enable-xds			\
 	--enable-x			\
 	--disable-backend-gnomevfs2 %{?0:want's build}	\
-%if %{without kio}
+%if !%{with kio}
 	--disable-backend-kio		\
 %else
 	--enable-backend-kio		\
