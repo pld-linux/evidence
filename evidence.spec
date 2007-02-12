@@ -3,7 +3,7 @@
 %bcond_without	kio	# disable kio backend
 #
 Summary:	Evidence - an eye-candy GTK+2/evas file manager
-Summary(pl.UTF-8):   Evidence - przyciągający oczy zarządca plików oparty na GTK+2/evas
+Summary(pl.UTF-8):	Evidence - przyciągający oczy zarządca plików oparty na GTK+2/evas
 Name:		evidence
 Version:	0.9.8
 %define	_snap	20050701
@@ -59,7 +59,7 @@ dopełniają tę nieco odmienną przeglądarkę.
 
 %package backend-kio
 Summary:	kio backend
-Summary(pl.UTF-8):   Backend kio
+Summary(pl.UTF-8):	Backend kio
 Group:		X11/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -71,7 +71,7 @@ Backend kio.
 
 %package metadata-extractor
 Summary:	Library for extracting information from any file
-Summary(pl.UTF-8):   Biblioteka do wyciągania informacji z dowolnego pliku
+Summary(pl.UTF-8):	Biblioteka do wyciągania informacji z dowolnego pliku
 Group:		X11/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -83,7 +83,7 @@ Biblioteka do wyciągania informacji z dowolnego pliku.
 
 %package metadata-mp3
 Summary:	Library for extracting information from MP3 files using libid3
-Summary(pl.UTF-8):   Biblioteka do wyciągania informacji z plików MP3 przy użyciu libid3
+Summary(pl.UTF-8):	Biblioteka do wyciągania informacji z plików MP3 przy użyciu libid3
 Group:		X11/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -95,7 +95,7 @@ Biblioteka do wyciągania informacji z plików MP3 przy użyciu libid3.
 
 %package metadata-taglib
 Summary:	Library for extracting information from MP3 files using libtag
-Summary(pl.UTF-8):   Biblioteka do wyciągania informacji z plików MP3 przy użyciu libtag
+Summary(pl.UTF-8):	Biblioteka do wyciągania informacji z plików MP3 przy użyciu libtag
 Group:		X11/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -107,7 +107,7 @@ Biblioteka do wyciągania informacji z plików MP3 przy użyciu libtag.
 
 %package metadata-vorbis
 Summary:	Library for extracting information from Ogg/Vorbis files
-Summary(pl.UTF-8):   Biblioteka do wyciągania informacji z plików Ogg/Vorbis
+Summary(pl.UTF-8):	Biblioteka do wyciągania informacji z plików Ogg/Vorbis
 Group:		X11/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -119,7 +119,7 @@ Biblioteka do wyciągania informacji z plików Ogg/Vorbis.
 
 %package thumbnailer-avifile
 Summary:	Thumbnailer for video files using avifile
-Summary(pl.UTF-8):   Generator miniaturek dla plików z filmami przy użyciu avifile
+Summary(pl.UTF-8):	Generator miniaturek dla plików z filmami przy użyciu avifile
 Group:		X11/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -131,7 +131,7 @@ Generator miniaturek dla plików z filmami przy użyciu avifile.
 
 %package thumbnailer-id3
 Summary:	Thumbnailer for files having ID3 tag
-Summary(pl.UTF-8):   Generator miniaturek dla plików ze znacznikami ID3
+Summary(pl.UTF-8):	Generator miniaturek dla plików ze znacznikami ID3
 Group:		X11/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -143,7 +143,7 @@ Generator miniaturek dla plików ze znacznikami ID3.
 
 %package thumbnailer-mpeg3
 Summary:	Thumbnailer for MP3 files
-Summary(pl.UTF-8):   Generator miniaturek dla plików MP3
+Summary(pl.UTF-8):	Generator miniaturek dla plików MP3
 Group:		X11/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -155,7 +155,7 @@ Generator miniaturek dla plików MP3.
 
 %package thumbnailer-xine
 Summary:	Thumbnailer for video files using xine
-Summary(pl.UTF-8):   Generator miniaturek dla plików z filmami przy użyciu xine
+Summary(pl.UTF-8):	Generator miniaturek dla plików z filmami przy użyciu xine
 Group:		X11/Libraries
 Requires:	%{name} = %{version}-%{release}
 
